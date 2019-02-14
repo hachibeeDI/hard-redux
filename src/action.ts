@@ -1,4 +1,3 @@
-/** actions ----------------------- */
 export type ActionType = string; //  <T, Root extends ActionType = ''> = Root extends '' ? :
 
 export interface SucceedAction<T extends ActionType, V> {
@@ -56,4 +55,3 @@ export function createActionCreator<T extends ActionType, I, V = I>(
   ac.actionTypeMarker = type;
   return ac;
 }
-/** ----------------------- actions */

@@ -2,7 +2,6 @@ import {Reducer} from 'react';
 
 import {ActionCreator, StandardAction, ActionType, SucceedAction, FailedAction} from './action';
 
-/** reducer ----------------------- */
 type FunctionalReducer<A extends StandardAction<string, any, any>, S, V, E> = (state: S, action: A) => S;
 
 type ReduceCase<T extends ActionType, S> = [
@@ -69,4 +68,3 @@ class ReducerCreatorInitiator<S> {
 export function createReducer<S>(initialState: S) {
   return new ReducerCreatorInitiator(initialState);
 }
-/** ----------------------- reducer */
